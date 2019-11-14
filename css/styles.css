@@ -60,6 +60,10 @@ html {
   list-style-type: none;
 }
 
+.page {
+  background-color: var(--color__grey--lighter);
+}
+
 .text_color_orange {
   color: #ea7d2b;
 }
@@ -76,15 +80,6 @@ html {
   color: #105f8c;
 }
 
-.card__text {
-  margin: 0;
-  color: #cbcbcb;
-}
-
-.page {
-  background-color: var(--color__grey--lighter);
-}
-
 /* section begin */
 .section__content {
   margin-bottom: 40px;
@@ -98,6 +93,10 @@ html {
 
   color: var(--color__grey);
   text-transform: uppercase;
+}
+
+.section__title.text_color_mint {
+  color: var(--color__mint);
 }
 /* section end */
 
@@ -193,6 +192,11 @@ html {
   color: #6a6a6a;
   text-transform: uppercase;
 }
+
+.card__text {
+  margin: 0;
+  color: #cbcbcb;
+}
 /* card end */
 
 /* icon begin */
@@ -248,8 +252,8 @@ html {
   text-transform: uppercase;
 }
 
-.aside__title.text_color_mint {
-  color: var(--color__mint);
+.aside__title.text_color_orange {
+  color: var(--color__orange);
 }
 
 .aside__text {
