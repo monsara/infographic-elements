@@ -1,0 +1,258 @@
+/*
+ * Author: Viktor Hirenko
+ *
+ * Project Name: Graphic Elements
+ * Version: 1.0
+ * Date: 14-11-2019
+ */
+
+:root {
+  --color__grey--lighter: #eaebed;
+  --color__grey--light: #cbcbcb;
+  --color__grey: #4d4d4d;
+
+  --color__white: #ffffff;
+
+  --color__orange: #ea7d2b;
+  --color__mint: #10adb0;
+  --color__coral: #ee4756;
+  --color__navy: #105f8c;
+
+  --font__family--base: "Roboto", sans-serif;
+  --color-text: var(--color__grey--darker);
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.root {
+  font-family: var(--font__family--base);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: var(--color__grey--light);
+}
+
+.container {
+  width: 90%;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.text_color_orange {
+  color: #ea7d2b;
+}
+
+.text_color_mint {
+  color: #26bfcd;
+}
+
+.text_color_coral {
+  color: #ee4756;
+}
+
+.text_color_navy-blue {
+  color: #105f8c;
+}
+
+.card__text {
+  margin: 0;
+  color: #cbcbcb;
+}
+
+.page {
+  background-color: var(--color__grey--lighter);
+}
+
+/* section begin */
+.section__content {
+  margin-bottom: 40px;
+}
+
+.section__title {
+  margin-bottom: 60px;
+
+  font-size: 2.6rem;
+  line-height: 3rem;
+
+  color: var(--color__grey);
+  text-transform: uppercase;
+}
+/* section end */
+
+/* column begin */
+.column__item {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  background-color: var(--color__white);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.column_right .column__item:last-child {
+  margin-bottom: 0;
+}
+
+.column__item::before,
+.column__item::after {
+  position: absolute;
+
+  content: "";
+}
+
+.column__item::before {
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 0;
+  height: 0;
+
+  border-top: 100px solid;
+  border-left: 100px solid transparent;
+}
+
+.column__item::after {
+  bottom: 0;
+  z-index: -1;
+
+  display: block;
+  width: 90%;
+  height: 11px;
+  border-radius: 50%;
+
+  box-shadow: 0 15px 17px rgba(0, 0, 0, 0.1);
+}
+
+.column_left .column__item:nth-child(1)::before {
+  border-top-color: var(--color__orange);
+}
+
+.column_left .column__item:nth-child(2)::before {
+  border-top-color: var(--color__mint);
+}
+
+.column_right .column__item:nth-child(1)::before {
+  border-top-color: var(--color__coral);
+}
+
+.column_right .column__item:nth-child(2)::before {
+  border-top-color: var(--color__navy);
+}
+/* column end */
+
+/* card begin */
+.card__content {
+  width: 75%;
+}
+
+.card__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 1rem;
+
+  color: #6a6a6a;
+  text-transform: uppercase;
+}
+/* card end */
+
+/* icon begin */
+.icon {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  transform: translate(-50%, 50%);
+}
+
+.icon_dollar {
+  border-radius: 50%;
+  background-image: url(../images/dollar-icon.svg);
+  background-color: #fff;
+  background-size: 30%;
+}
+
+.icon_chart-bar {
+  background-image: url(../images/chart-bar-icon.svg);
+}
+
+.icon_magnifying-glass {
+  background-image: url(../images/magnifying-glass-icon.svg);
+}
+
+.icon_human {
+  background-image: url(../images/human-icon.svg);
+}
+/* icon end */
+
+/* aside begin */
+.aside {
+  display: flex;
+  min-height: 240px;
+  margin-bottom: 100px;
+
+  font-size: 1rem;
+
+  background-color: #fff;
+  box-shadow: 0 0 16px #c5c5c5;
+  align-items: center;
+}
+
+.aside__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  line-height: 1.8rem;
+  word-spacing: 5px;
+  color: var(--color__grey);
+
+  text-transform: uppercase;
+}
+
+.aside__title.text_color_mint {
+  color: var(--color__mint);
+}
+
+.aside__text {
+  margin: 0;
+}
+/* aside end */

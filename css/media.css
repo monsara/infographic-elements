@@ -1,0 +1,360 @@
+@media (min-width: 500px) {
+  .container {
+    padding: 0;
+  }
+
+  /* column begin */
+  .column__item {
+    width: 290px;
+    height: 166px;
+  }
+
+  .column__item::before {
+    position: absolute;
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    content: "";
+  }
+
+  .column .column__item:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .column .column__item:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .column .column__item:nth-child(1)::before,
+  .column .column__item:nth-child(2)::before {
+    border-top: 83px solid transparent;
+    border-bottom: 83px solid transparent;
+  }
+
+  .column .column__item:nth-child(1)::before {
+    right: -50%;
+  }
+
+  .column .column__item:nth-child(2)::before {
+    left: -50%;
+
+    border-left: 0;
+  }
+
+  .column_left .column__item:nth-child(1)::before {
+    border-left: 144px solid var(--color__orange);
+  }
+
+  .column_left .column__item:nth-child(2)::before {
+    border-right: 144px solid var(--color__mint);
+  }
+
+  .column_right .column__item:nth-child(1)::before {
+    border-left: 144px solid var(--color__coral);
+  }
+
+  .column_right .column__item:nth-child(2)::before {
+    border-right: 144px solid var(--color__navy);
+  }
+  /* column end */
+
+  /* card begin */
+  .card:nth-child(1) .card__icon,
+  .card:nth-child(2) .card__icon {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .card:nth-child(1) .card__icon {
+    right: -63px;
+  }
+
+  .card:nth-child(2) .card__icon {
+    left: -63px;
+  }
+
+  .card:nth-child(1) .card__title {
+    text-align: end;
+  }
+
+  .card:nth-child(2) .card__title {
+    text-align: left;
+  }
+  /* card end */
+
+  .aside {
+    min-height: 166px;
+  }
+}
+
+@media (min-width: 840px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .section__content {
+    margin-bottom: 110px;
+  }
+
+  .section__title {
+    margin-bottom: 100px;
+  }
+
+  .section__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* column begin */
+  .column {
+    position: relative;
+  }
+
+  .column_left {
+    transform: translateY(100px);
+  }
+
+  .column_left::after,
+  .column_right::before {
+    position: absolute;
+
+    display: block;
+    width: 6px;
+    height: 540px;
+
+    content: "";
+  }
+
+  .column_right::before {
+    left: -6px;
+    top: -42px;
+    z-index: 1;
+
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(153, 153, 153, 0.31) 88%
+    );
+  }
+
+  .column_left::after {
+    right: -6px;
+    top: -142px;
+
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    background: linear-gradient(
+      90deg,
+      rgba(153, 153, 153, 0.31) 0%,
+      transparent 88%
+    );
+  }
+
+  .column__item {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .column_left .column__item:nth-child(2)::before {
+    left: auto;
+
+    border-right: none;
+    border-left: 144px solid var(--color__mint);
+  }
+
+  .column_right .column__item:nth-child(1)::before {
+    right: auto;
+    left: -50%;
+
+    border-left: none;
+    border-right: 144px solid var(--color__coral);
+  }
+
+  .column .column__item::before {
+    right: -50%;
+    border-top: 83px solid transparent;
+    border-bottom: 83px solid transparent;
+  }
+
+  .column_left .card__icon {
+    top: 50%;
+    right: -63px;
+  }
+
+  .column_left .card:nth-child(2) .card__icon {
+    left: auto;
+  }
+
+  .column_right .card__icon {
+    top: 50%;
+
+    right: auto;
+    left: -63px;
+  }
+
+  .column_left .card:nth-child(2) .card__title {
+    text-align: right;
+  }
+
+  .column_right .card:nth-child(1) .card__title {
+    text-align: left;
+  }
+  /* column end */
+
+  .aside {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 970px) {
+  .container {
+    max-width: 872px;
+    margin: 0 auto;
+  }
+
+  .section__content {
+    margin: 0 auto;
+    margin-bottom: 106px;
+  }
+
+  .column__item {
+    width: 326px;
+    height: 166px;
+  }
+
+  .column .column__item:nth-child(1)::before,
+  .column .column__item:nth-child(2)::before {
+    right: -44%;
+  }
+
+  .column_right .column__item:nth-child(1)::before,
+  .column_right .column__item:nth-child(2)::before {
+    left: -44%;
+  }
+
+  .aside {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1824px) {
+  .container {
+    max-width: 1500px;
+  }
+
+  .section__title {
+    margin-bottom: 300px;
+  }
+
+  .column_left {
+    transform: none;
+  }
+
+  /* column begin */
+  .column_left::after,
+  .column_right::before {
+    display: none;
+  }
+
+  .column__list {
+    display: flex;
+    justify-content: space-around;
+    width: 750px;
+  }
+
+  .column__item {
+    height: 326px;
+  }
+
+  .column_left .column__item:nth-child(1):before,
+  .column_left .column__item:nth-child(2):before,
+  .column_right .column__item:nth-child(1):before,
+  .column_right .column__item:nth-child(2):before {
+    left: auto;
+    top: -144px;
+    right: auto;
+
+    border-left: 83px solid transparent;
+    border-top: none;
+    border-right: 83px solid transparent;
+    border-bottom: 144px solid;
+  }
+
+  .column_left .column__item:nth-child(1):before {
+    border-bottom-color: var(--color__orange);
+  }
+
+  .column_left .column__item:nth-child(2):before {
+    border-bottom-color: var(--color__mint);
+  }
+
+  .column_right .column__item:nth-child(1):before {
+    border-bottom-color: var(--color__coral);
+  }
+
+  .column_right .column__item:nth-child(2):before {
+    border-bottom-color: var(--color__navy);
+  }
+
+  .card:nth-child(1) .card__icon,
+  .column_left .card:nth-child(2) .card__icon {
+    left: 50%;
+    top: -63px;
+    right: auto;
+
+    transform: translateX(-50%);
+  }
+
+  .column_left .card:nth-child(1) .card__title,
+  .column_left .card:nth-child(2) .card__title {
+    text-align: left;
+  }
+  /* column end */
+
+  .card__title,
+  .card__text,
+  .aside__title,
+  .aside__text {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .container {
+    min-width: 2000px;
+  }
+
+  .column__list {
+    width: 1000px;
+  }
+
+  .column__item {
+    width: 400px;
+    height: 400px;
+  }
+
+  .card__title,
+  .card__text,
+  .aside__title,
+  .aside__text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .aside {
+    width: 1300px;
+    height: 240px;
+  }
+
+  .aside .container {
+    min-width: 1000px;
+  }
+}
