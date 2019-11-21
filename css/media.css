@@ -89,6 +89,12 @@
   }
 }
 
+@media (min-width: 710px) {
+  .column__item {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: 840px) {
   .container {
     max-width: 800px;
